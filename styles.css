@@ -1,0 +1,248 @@
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: 1500px;
+    /* Максимальная ширина контейнера для всех элементов */
+    margin: 0 auto;
+    /* Центрирование контейнера на странице */
+    background-color: #f1f1f1;
+    /* Фоновый цвет контейнера */
+    padding: 20px;
+    /* Отступы вокруг всех элементов внутри контейнера */
+}
+
+.tournament-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.player-names {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    /* Высота .tournament-title */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    width: 100%;
+    height: 170px; /* Задайте фиксированную высоту для элементов */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button-container {
+    position: absolute;
+    /* Абсолютное позиционирование для контейнера кнопок */
+    bottom: 0;
+    /* Кнопки будут прижаты к нижней части .grid-item */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.pick-button:hover {
+    background-color: #45a049;
+}
+
+.ban-button:hover {
+    background-color: #e53935
+}
+
+.pick-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.ban-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+}
+
+.menu h3 {
+    margin-top: 0;
+}
+
+.menu select {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.menu button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: #45a049;
+}
+
+.player-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        display: none;
+        z-index: 1;
+    }
+    .player-label.pick-label {
+        background-color: #4CAF50;
+        /* Зеленый фон для выбора "Пик" */
+    }
+    .player-label.ban-label {
+        background-color: #f44336;
+        /* Красный фон для выбора "Бан" */
+    }
+
+/* Стиль для заголовка страницы */
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+
+/* Стиль для кнопок "Пик" и "Бан" при наведении */
+
+.pick-button:hover,
+.ban-button:hover {
+    background-color: #3E8E41;
+}
+
+
+/* Стиль для кнопок "Пик" и "Бан" при активации (нажатии) */
+
+.pick-button:active,
+.ban-button:active {
+    background-color: #367b3d;
+}
+
+
+/* Стиль для поля ввода имен игроков */
+
+.player-names input {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Стиль для кнопок выбора игрока в меню */
+
+.menu button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/* Стиль для блока с изображением и кнопками */
+
+.grid-item {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+/* Стиль для меню при активации (отображении) */
+
+.menu[style*="display: block;"] {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.ban-button {
+    background-color: #f44336;
+}
