@@ -16,13 +16,6 @@ function closeMenu() {
     var menu = document.getElementById('menu');
     menu.style.display = 'none';
 }
-document.getElementById('menu').addEventListener('change', function () {
-    var selectedPlayerNumber = document.getElementById('player-select').value;
-    var selectedPlayerName = players[selectedPlayerNumber];
-    var action = this.dataset.action;
-    var playerNumber = this.dataset.player;
-    alert('Для ' + players[playerNumber] + ' выбран игрок ' + selectedPlayerName + ' для действия "' + action + '"');
-});
 
 function updatePlayerNames() {
 
@@ -33,16 +26,15 @@ function updatePlayerNames() {
 }
 
 function updatePlayerNamesOnPage() {
-
-  document.getElementById('player1').value = players[1];
-  document.getElementById('player2').value = players[2];
-  document.getElementById('pick-label-1').textContent = 'Пик: ' + players[1];
-  document.getElementById('ban-label-1').textContent = 'Бан: ' + players[1];
-  document.getElementById('pick-label-2').textContent = 'Пик: ' + players[2];  
-  document.getElementById('ban-label-2').textContent = 'Бан: ' + players[2];
-
+    document.getElementById('player1').value = players[1];
+    document.getElementById('player2').value = players[2];
+    document.getElementById('player-label-1').textContent = 'Пик: ' + players[1];
+    document.getElementById('player-label-1-ban').textContent = 'Бан: ' + players[1];
+    document.getElementById('player-label-2').textContent = 'Пик: ' + players[2];  
+    document.getElementById('player-label-2-ban').textContent = 'Бан: ' + players[2];
 }
 
+// Функция для обновления опций селекта
 function updateSelectOption(playerNumber) {
     const playerNameInput = document.getElementById(`player${playerNumber}`);
     const playerName = playerNameInput.value;
