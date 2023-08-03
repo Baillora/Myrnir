@@ -43,13 +43,16 @@ function updatePlayerNamesOnPage() {
 
 }
 
-// Функция для обновления опций селекта
 function updateSelectOption(playerNumber) {
     const playerNameInput = document.getElementById(`player${playerNumber}`);
     const playerName = playerNameInput.value;
     const selectOption = document.querySelector(`#player-select option[value="${playerNumber}"]`);
     selectOption.textContent = playerName;
+    
+    // Обновляем значение в объекте players
+    players[playerNumber] = playerName;
 }
+
 // Функция для принятия выбора "Пик" или "Бан" и отображения надписи на картинке
 function acceptPickBan() {
     const menu = document.getElementById('menu');
