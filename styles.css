@@ -190,24 +190,15 @@ h1 {
     color: #fff;
 }
 
-
-/* Стиль для кнопок "Пик" и "Бан" при наведении */
-
 .pick-button:hover,
 .ban-button:hover {
     background-color: #666666;
 }
 
-
-/* Стиль для кнопок "Пик" и "Бан" при активации (нажатии) */
-
 .pick-button:active,
 .ban-button:active {
     background-color: #367b3d;
 }
-
-
-/* Стиль для поля ввода имен игроков */
 
 .player-names input {
     padding: 5px 10px;
@@ -216,16 +207,10 @@ h1 {
     border-radius: 4px;
 }
 
-
-/* Стиль для кнопок выбора игрока в меню */
-
 .menu button {
     width: 100%;
     margin-top: 10px;
-}
 
-
-/* Стиль для блока с изображением и кнопками */
 
 .grid-item {
     background-color: #000000;
@@ -235,8 +220,6 @@ h1 {
     overflow: hidden;
 }
 
-
-/* Стиль для меню при активации (отображении) */
 
 .menu[style*="display: block;"] {
     animation: fadeIn 0.3s ease;
