@@ -1,4 +1,3 @@
-// JavaScript код
 var players = {
     1: 'Игрок 1'
     , 2: 'Игрок 2'
@@ -34,18 +33,15 @@ function updatePlayerNamesOnPage() {
     document.getElementById('player-label-2-ban').textContent = 'Бан: ' + players[2];
 }
 
-// Функция для обновления опций селекта
 function updateSelectOption(playerNumber) {
     const playerNameInput = document.getElementById(`player${playerNumber}`);
     const playerName = playerNameInput.value;
     const selectOption = document.querySelector(`#player-select option[value="${playerNumber}"]`);
     selectOption.textContent = playerName;
     
-    // Обновляем значение в объекте players
     players[playerNumber] = playerName;
 }
 
-// Функция для принятия выбора "Пик" или "Бан" и отображения надписи на картинке
 function acceptPickBan() {
     const menu = document.getElementById('menu');
     const action = menu.dataset.action;
@@ -60,7 +56,7 @@ function acceptPickBan() {
     // Закрываем меню
     closeMenu();
 }
-// Добавляем обработчик для кнопки "Принять"
+
 document.getElementById('accept-button').addEventListener('click', acceptPickBan);
-// Обновляем имена игроков на странице при загрузке
+
 updatePlayerNamesOnPage();
